@@ -1,0 +1,11 @@
+Greetings,
+
+You just singned up for an account at {{site.name}}. Please click the link below to activate it:
+
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+This link is valid for {{ expiration_days }}.
+
+If you did not sign up for this account, it is safe to ignore this email.
+
+- The MyBookStore Team
