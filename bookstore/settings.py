@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
     'store',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +118,13 @@ STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/store/'
+
+# Email Settings
+EMAIL_BACKEND = "django.core.email.backends.smtp.EamilBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "AndresWebTest@gmail.com"
+EMAIL_HOST_PASSWORD = "a5ydbovb"
+EMAIL_PORT = 587
+EMAI_USE_TLS = True
+EMAIL_FROM_EMAIL = "books@MyBookStore.com"
